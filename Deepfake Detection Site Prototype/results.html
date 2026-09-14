@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang = "en">
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Deepfake Detector (PROTOTYPE)</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="custom.css">
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+        <div class="container">
+            <a class="navbar-brand logo" href="home.html">
+            <span class="logo-text">Deepfake Detector</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Results Section -->
+    <div class="container mt-4 text-center">
+      <h2>Your audio file has been analyzed!</h2><br>
+      <h3>Analysis Summary</h3>
+    </div>
+    <!-- Confidence Score Section -->
+    <div class="container mt-4">
+        <h3>Confidence Score</h3>
+        <p id="confidenceScore">90%</p>
+        <p class="text-danger">Chances are very high this is a deepfake audio file. Please proceed with caution.</p>
+    </div>
+    <!-- Disclaimer Section -->
+    <div class="container mt-4">
+        <p><strong>Disclaimer:</strong> The machine learning model used is not 100% accurate and results should be interpreted with caution.</p>
+    </div>
+    <!-- Back to Home Button -->
+    <div class="container mt-4 text-center">
+        <a href="home.html" class="btn btn-primary">Back to Home</a>
+  </body>
+</html>

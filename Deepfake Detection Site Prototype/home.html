@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang = "en">
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Deepfake Detector (PROTOTYPE)</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="custom.css">
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+        <div class="container">
+            <a class="navbar-brand logo" href="home.html">
+            <span class="logo-text">Deepfake Detector</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Starting Message -->
+    <div class="container mt-4 align-items-right text-right">
+      <h1>Welcome to the Deepfake Detector!</h1>
+      <p>In recent times, deepfake audio has begun to get more difficult to detect. This is the reason why this site was made,
+         to help people identify and detect deepfake content. To use our detector, simply drag and drop an audio file below,
+         and click "Analyze" to have our machine give you a confidence score.</p>
+    </div>
+
+    <!-- Drag and Drop Area -->
+    <div class="container mt-4 align-items-left text-left">
+      <div class="row">
+        <div class="col-md-6 mx-auto">
+          <div class="card">
+            <div class="card-body text-center">
+              <p>&plus;</p>
+              <p>Drag and drop your audio file here</p>
+              <input type="file" id="audioFile" accept="audio/*" style="display: none;">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Analyze Button -->
+    <div class="container mt-4 align-items-right text-center">
+      <a id="analyzeButton" class="btn btn-primary" href="loading.html">Analyze</a>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  </body>
+</html>
