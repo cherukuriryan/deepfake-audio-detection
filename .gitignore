@@ -216,3 +216,9 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+# Project dataset
+data/*
+!data/README.md
+
+# Trained models
+models/*.pkl
