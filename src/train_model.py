@@ -6,7 +6,7 @@ from datasets import load_dataset, Audio
 import io
 import soundfile as sf
 import librosa
-
+import joblib
 dataset = load_dataset(
     "isjwdu/DFADD",
     split="train",
@@ -69,3 +69,4 @@ predictions = model.predict(X_test)
 accuracy = accuracy_score(y_test, predictions)
 
 print("Model accuracy:", accuracy)
+joblib.dump(model, "models/deepfake_audio_model.pkl")
