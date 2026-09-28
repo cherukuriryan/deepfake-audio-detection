@@ -1,7 +1,7 @@
 import numpy as np
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split
-from sklearn.metrics import accuracy_score
+from sklearn.metrics import accuracy_score, classification_report, confusion_matrix
 from datasets import load_dataset, Audio
 import io
 import soundfile as sf
@@ -69,4 +69,9 @@ predictions = model.predict(X_test)
 accuracy = accuracy_score(y_test, predictions)
 
 print("Model accuracy:", accuracy)
+
+print(classification_report(y_test, predictions))
+print("Confusion matrix:")
+print(confusion_matrix(y_test, predictions))
+
 joblib.dump(model, "models/deepfake_audio_model.pkl")
