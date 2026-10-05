@@ -1,0 +1,23 @@
+Random Forest
+1000 - 2 mins
+10000 - 5 mins
+20000 - 8 mins
+
+Support Vector Machine
+1000 – 2 mins
+10000 – 5 mins
+20000 – 9 mins
+
+Gradient Boosting
+1000 – 1 min
+10000 – 4 mins
+20000 – 7 mins
+
+Logistic Regression
+1000 – 1 min
+10000 – 4 mins
+20000 - 7 mins
+
+MLP
+1000 - 2 mins
+10000 - 5 mins
