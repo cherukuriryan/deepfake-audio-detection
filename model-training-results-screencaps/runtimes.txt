@@ -21,3 +21,4 @@ Logistic Regression
 MLP
 1000 - 2 mins
 10000 - 5 mins
+20000 - 8 mins
