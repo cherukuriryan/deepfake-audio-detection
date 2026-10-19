@@ -1,12 +1,17 @@
+import sys
 import joblib
 import librosa
 import numpy as np
 
-model = joblib.load("models/deepfake_audio_model.pkl")
+model = joblib.load("models/deepfake_audio_mlp_model.pkl")
 
 
 def extract_features(audio_path):
-    audio_data, sample_rate = librosa.load(audio_path, sr=16000, mono=True)
+    audio_data, sample_rate = librosa.load(
+        audio_path,
+        sr=16000,
+        mono=True
+    )
 
     mfcc = librosa.feature.mfcc(
         y=audio_data,
@@ -22,6 +27,20 @@ def predict_audio(audio_path):
 
     prediction = model.predict([features])[0]
     probabilities = model.predict_proba([features])[0]
-    confidence = max(probabilities)
 
-    return prediction, confidence * 100
+    confidence = np.max(probabilities) * 100
+
+    return prediction, confidence
+
+
+if __name__ == "__main__":
+    if len(sys.argv) != 2:
+        print("Usage: python src/predict_audio.py <audio_file>")
+        sys.exit(1)
+
+    audio_path = sys.argv[1]
+
+    prediction, confidence = predict_audio(audio_path)
+
+    print("Prediction:", prediction)
+    print(f"Confidence: {confidence:.2f}%")
