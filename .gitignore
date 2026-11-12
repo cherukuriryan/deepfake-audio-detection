@@ -223,3 +223,4 @@ data/*
 # Trained models
 models/*.pkl
 test_audio/
+!models/deepfake_audio_richer_multidataset_mlp.pkl
